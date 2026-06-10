@@ -1,0 +1,299 @@
+@font-face {
+  font-family: 'rokkitt';
+  src: url(../../fonts/rokkitt/Rokkitt-VariableFont_wght.ttf);
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: 'rokkittMedium';
+  src: url(../../fonts/rokkitt/static/Rokkitt-Medium.ttf);
+}
+@font-face {
+  font-family: 'rokkittLight';
+  src: url(../../fonts/rokkitt/static/Rokkitt-Light.ttf);
+}
+.pagin{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  .page-link:focus:not(:focus-visible){
+    box-shadow: none;
+    outline: none;
+  }
+
+  .pagination{
+    .page-item{
+      .page-link{
+        color: rgb(0, 143, 26);
+        font-family: 'rokkitt';
+        font-weight: 700;
+      }
+      .page-link.activeP{
+        background-color: rgb(86, 102, 139);
+        color: rgb(120, 235, 132);
+      }
+    }
+  }
+}
+.contForCard{
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px 30px;
+  gap: 30px;
+  flex-direction: row;
+
+  @media (max-width: 980px) {
+    padding: 30px 15px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cards{
+    background-color: rgb(111, 115, 125);
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 10px;
+
+    @media (max-width : 1150px) {
+      height: 200px;
+    }
+    @media (max-width: 980px) {
+      height: 250px;
+    }
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      height: 430px;
+      gap: 0px;
+    }
+    @media (max-width: 300px) {
+      height: 465px;
+    }
+
+    .imgCards{
+      width: 40%;
+      height: 100%;
+      @media (max-width: 600px) {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      @media (max-width: 580px) {
+        width: 65%;
+      }
+      @media (max-width: 490px) {
+        width: 100%;
+      }
+
+      img{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width : 1150px) {
+          height: 200px;
+        }
+        @media (max-width: 980px) {
+          height: 250px;
+        }
+        @media (max-width: 600px) {
+          height: 200px;
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        @media (max-width: 490px) {
+          border-bottom-right-radius: 0px;
+          border-bottom-left-radius: 0px;
+        }
+      }
+    }
+    .info{
+      width: calc((100% - 10px) - 40%);
+      font-family: 'rokkitt';
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0;
+
+      @media (max-width: 600px) {
+        padding: 5px 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+      }
+      @media (max-width:500px) {
+        padding: 5px 5px;
+      }
+
+      h4{
+        font-size: 30px;
+        font-weight: 800;
+        color: azure;
+        margin-bottom: 0;
+        line-height: 25px;
+
+        @media (max-width: 1080px) {
+          font-size: 27px;
+        }
+        @media (max-width: 980px) {
+          font-size: 30px;
+        }
+        @media (max-width: 755px) {
+          font-size: 25px;
+        }
+      }
+      .type{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @media (max-width: 1150px) {
+          height: 40px;
+        }
+        @media (max-width: 600px) {
+          height: 25px;
+        }
+
+        .cirkle{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: greenyellow;
+          border-radius: 10px;
+        }
+        span{
+          font-family: 'rokkittMedium';
+          font-size: 27px;
+          color: rgb(220, 220, 245);
+
+          @media (max-width: 1080px) {
+            font-size: 24px;
+          }
+          @media (max-width: 980px) {
+            font-size: 27px;
+          }
+          @media (max-width: 755px) {
+            font-size: 23px;
+          }
+        }
+      }
+      .locations{
+        letter-spacing: 1px;
+        margin-top: 25px;
+
+        @media (max-width: 1150px) {
+          margin-top: 0px;
+        }
+        @media (max-width: 980px) {
+          margin-top: 25px;
+        }
+        @media (max-width: 755px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 640px) {
+          margin-top: 15px;
+        }
+        @media (max-width: 600px) {
+          margin-top: 12px;
+        }
+
+        .lastLocations{
+          span{
+            font-size: 25px;
+            color: rgb(54, 59, 63);
+            font-family: 'rokkittLight';
+
+            @media (max-width: 1080px) {
+              font-size: 22px;
+            }
+            @media (max-width: 980px) {
+              font-size: 25px;
+            }
+            @media (max-width: 755px) {
+              font-size: 21px;
+            }
+          }
+        }
+        .namelocation{
+          span{
+            font-size: 25px;
+            color: azure;
+            font-family: 'rokkittLight';
+            line-height: 0px;
+            
+            @media (max-width: 1080px) {
+              font-size: 22px;
+            }
+            @media (max-width: 980px) {
+              font-size: 25px;
+            }
+            @media (max-width: 755px) {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+      .firstLocations{
+        letter-spacing: 1px;
+        margin-top: 25px;
+
+        @media (max-width: 1150px) {
+          margin-top: 0px;
+        }
+        @media (max-width: 980px) {
+          margin-top: 25px;
+        }
+        @media (max-width: 755px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 640px) {
+          margin-top: 15px;
+        }
+        @media (max-width: 600px) {
+          margin-top: 12px;
+        }
+        
+        .lastLocations{
+          span{
+            font-size: 25px;
+            color: rgb(54, 59, 63);
+            font-family: 'rokkittLight';
+
+            @media (max-width: 1080px) {
+              font-size: 22px;
+            }
+            @media (max-width: 980px) {
+              font-size: 25px;
+            }
+            @media (max-width: 755px) {
+              font-size: 21px;
+            }
+          }
+        }
+        .namelocation{
+          span{
+            font-size: 25px;
+            color: azure;
+            font-family: 'rokkittLight';
+            line-height: 0px;
+
+            @media (max-width: 1080px) {
+              font-size: 22px;
+            }
+            @media (max-width: 980px) {
+              font-size: 25px;
+            }
+            @media (max-width: 755px) {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

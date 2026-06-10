@@ -1,0 +1,102 @@
+@use './characters/characters.scss';
+@use './locations/locations.scss';
+@use './episodes/episodes.scss';
+@font-face {
+  font-family: 'rokkitt';
+  src: url(../fonts/rokkitt/Rokkitt-VariableFont_wght.ttf);
+  font-weight: 100 900;
+}
+
+
+body{
+  margin: 0;
+  
+  .all{
+    background-color: rgb(39, 43, 51);
+    min-height: 100vh;
+
+    .cont{
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+
+      @media (max-width: 915px) {
+        padding: 40px;
+      }
+      @media (max-width: 440px) {
+        padding: 15px;
+      }
+
+      .selectP{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;;
+        min-height: 150px;
+        max-height: 500px;
+        border-radius: 12px;
+        background-color: rgb(92, 96, 104);
+        padding: 30px;
+        border: 2px solid greenyellow;
+
+        @media (max-width: 1230px) {
+          gap: 15px;
+          padding: 20px;
+        }
+        @media (max-width: 1190px) {
+          width: 60%;
+        }
+        @media (max-width: 1040px) {
+          width: 70%;
+        }
+        @media (max-width: 915px) {
+          width: 75%;
+          padding: 10px;
+        }
+        @media (max-width: 760px) {
+          width: 80%;
+        }
+        @media (max-width: 720px) {
+          width: 90%;
+        }
+        @media (max-width: 650px) {
+          flex-direction: column;
+        }
+
+        .btnP{
+          width: calc((100% - 60px) / 3);
+          background-color: rgb(53, 83, 58);
+          padding: 20px;
+          font-family: 'rokkitt';
+          color: rgb(68, 224, 57);
+          font-weight: 700;
+          font-size: 35px;
+          border-radius: 8px;
+          border: 1px solid rgb(66, 237, 32);
+
+          @media (max-width: 1660px) {
+            font-size: 30px;
+          }
+          @media (max-width: 1520px) {
+            font-size: 25px;
+          }
+          @media (max-width: 1420px) {
+            padding: 10px;
+          }
+          @media (max-width: 1230px) {
+            font-size: 25px;
+          }
+          @media (max-width: 650px) {
+            width: 100%;
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
