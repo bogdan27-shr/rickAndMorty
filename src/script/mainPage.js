@@ -4,12 +4,12 @@ export function mainPage() {
 
   btn.forEach((el) => {
     el.addEventListener('click', () => {
-      if (el.id === 'characters') {
-        window.location = `${BASE}characters.html`;
-      }else if (el.id === 'episodes') {
-        window.location = `${BASE}episodes.html`;
-      }else if (el.id === 'locations') {
-        window.location = `${BASE}locations.html`;
+      if(el.id === 'characters') {
+        window.location = `${BASE}src/pages/characters.html`;
+      }else if(el.id === 'episodes') {
+        window.location = `${BASE}src/pages/episodes.html`;
+      }else if(el.id === 'locations') {
+        window.location = `${BASE}src/pages/locations.html`;
       }
     });
   });
