@@ -4,11 +4,11 @@ export function mainPage() {
   btn.forEach((el) => {
     el.addEventListener(`click`, () => {
       if(el.id === `characters`){
-        window.location = '/src/pages/characters.html';
+        window.location = 'characters.html';
       }else if(el.id === `episodes`){
-        window.location = '/src/pages/episodes.html';
+        window.location = 'episodes.html';
       }else if(el.id === `locations`){
-        window.location = '/src/pages/locations.html';
+        window.location = 'locations.html';
       }
     });
   });
