@@ -1,11 +1,12 @@
 import {createCards} from './creaeteCards.js';
+import rickImage from '../img/card/rickAndMorty.webp';
 
 export function creaeteEpisodes (el) {
   let cards = createCards(`article`, `cards`);
 
   let imgDiv = createCards(`div`, `imgCards`);
   let img = createCards(`img`);
-  img.src = `../img/card/rickAndMorty.webp`;
+  img.src = rickImage;
   img.alt = `Зображення не пiдвантажилось`;
   imgDiv.append(img);
   let info = createCards(`div`, `info`);
